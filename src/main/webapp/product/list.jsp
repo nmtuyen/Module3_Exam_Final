@@ -26,8 +26,8 @@
             <td><c:out value="${product.productColor}"/></td>
             <td><c:out value="${product.description}"/></td>
             <td><c:out value="${product.productCategory}"/></td>
-            <td><a href="/products?action=edit&id=${product.id}">Edit</a></td>
-            <td><a href="/products?action=delete&id=${product.id}">Delete</a></td>
+            <td><a href="/products?action=edit&id=${product.productId}">Edit</a></td>
+            <td><a href="/products?action=delete&id=${product.productId}">Delete</a></td>
         </tr>
     </c:forEach>
 </table>

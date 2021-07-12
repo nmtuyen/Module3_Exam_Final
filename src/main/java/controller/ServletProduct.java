@@ -90,4 +90,13 @@ public class ServletProduct extends HttpServlet {
         showListProduct(request, response);
     }
 
+    public void updateProduct(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
+        int age = Integer.parseInt(request.getParameter("age"));
+        String gender = request.getParameter("gender");
+        String address = request.getParameter("address");
+        String conduct = request.getParameter("conduct");
+
+    }
 }

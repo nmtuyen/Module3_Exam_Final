@@ -12,23 +12,23 @@
     <title>Form Add Product</title>
 </head>
 <body>
-<form action="/products" method="post">
-    <input type="hidden" name="action" value="create">
-    <p>productID</p>
-    <input type="text" name="productId" id="productId">
-    <p>productName</p>
-    <input type="text" name="productName" id="productName">
-    <p>productPrice</p>
-    <input type="text" name="productPrice" id="productPrice">
-    <p>productQuantity</p>
-    <input type="text" name="productQuantity" id="productQuantity">
-    <p>productColor</p>
-    <input type="text" name="productColor" id="productColor">
-    <p>description</p>
-    <input type="text" name="description" id="description">
-    <p>productCategory</p>
-    <input type="text" name="productCategory" id="productCategory"><br>
-    <button>Add Product</button>
-</form>
+    <form action="/products" method="post">
+        <input type="hidden" name="action" value="create">
+        <p>productID</p>
+        <input type="text" name="productId" id="productId">
+        <p>productName</p>
+        <input type="text" name="productName" id="productName">
+        <p>productPrice</p>
+        <input type="text" name="productPrice" id="productPrice">
+        <p>productQuantity</p>
+        <input type="text" name="productQuantity" id="productQuantity">
+        <p>productColor</p>
+        <input type="text" name="productColor" id="productColor">
+        <p>description</p>
+        <input type="text" name="description" id="description">
+        <p>productCategory</p>
+        <input type="text" name="productCategory" id="productCategory"><br>
+        <button>Add Product</button>
+    </form>
 </body>
 </html>

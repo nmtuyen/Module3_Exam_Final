@@ -2,7 +2,7 @@ model/Product.java
  model.Product
 dao/SQLConnection.java
  dao.SQLConnection
-dao/ProductDAO.java
- dao.ProductDAO
 controller/ServletProduct.java
  controller.ServletProduct
+dao/ProductDAO.java
+ dao.ProductDAO

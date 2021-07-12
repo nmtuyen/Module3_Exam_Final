@@ -18,8 +18,9 @@ public class ProductDAO {
 
     private final String SHOW_LIST = "SELECT * FROM product;";
     private final String INSERT_PRODUCT = "INSERT INTO product VALUES (?, ?, ?, ?, ?, ?, ?);";
-    private final String DELETE_PRODUCT = "DELETE product WHERE id =?;";
-    private final String FIND_BY_ID = "SELECT * FROM product BY id =?;";
+    private final String DELETE_PRODUCT = "DELETE FROM product WHERE ProductId =?;";
+    private final String FIND_BY_ID = "SELECT * FROM product BY ProductId =?;";
+    private final String UPDATE_STUDENT = "UPDATE product SET productId = ?, productName = ?, productPrice = ?, productQuantity = ?, productColor = ?, description =?, productCategory where id = ?";
 
 
     public List<Product> showListProduct() throws SQLException {
@@ -69,6 +70,18 @@ public class ProductDAO {
     public void delete(int id) throws SQLException {
         PreparedStatement preparedStatement = connection.prepareStatement(DELETE_PRODUCT);
         preparedStatement.setInt(1, id);
+        preparedStatement.executeUpdate();
+    }
+
+    public void Update(Product product) throws SQLException {
+        PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_STUDENT);
+        preparedStatement.setInt(1, product.getProductId());
+        preparedStatement.setInt(3, product.getProductPrice());
+        preparedStatement.setString(2, product.getProductName());
+        preparedStatement.setInt(4, product.getProductQuantity());
+        preparedStatement.setString(5, product.getProductColor());
+        preparedStatement.setString(6, product.getDescription());
+        preparedStatement.setString(7, product.getProductCategory());
         preparedStatement.executeUpdate();
     }
 }
